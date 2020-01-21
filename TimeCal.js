@@ -62,27 +62,27 @@ document.getElementById("sel").addEventListener("change",getTime);
 var dayval=document.getElementById("day").value;
 
 if(val==='平日'){
-	if(time1_hour <= 12.00 && time2_hour >= 13.00 && diff_hour <= 8.45){
+     if(time1_hour <= 12.00 && time2_hour >= 13.00 && diff_hour <= 8.45){
 	document.getElementById('break').value=break1_hour;
 	document.getElementById('total').value=timeWithb1;
 	document.getElementById('extraTime').value=0;
 	document.getElementById('extraWork').value=0;
 	}
-	else if(time1_hour <= 12.00 && time2_hour >= 13.00 && diff_hour >= 8.45 && diff_hour<=9.15){
+     else if(time1_hour <= 12.00 && time2_hour >= 13.00 && diff_hour >= 8.45 && diff_hour<=9.15){
 	document.getElementById('break').value=break1_hour;
 	document.getElementById('total').value=normal_hour;
 	document.getElementById('extraTime').value=0;
 	document.getElementById('extraWork').value=0;
 	}
     
-	else if( (time1_hour > 12.00 && time2_hour > 13.00 || time1_hour < 12.00 && time2_hour < 13.00 ) && diff_hour <= 5.15 ){
+     else if( (time1_hour > 12.00 && time2_hour > 13.00 || time1_hour < 12.00 && time2_hour < 13.00 ) && diff_hour <= 5.15 ){
 	if(diff_hour<=4.45){
 	document.getElementById('break').value=0;
 	document.getElementById('total').value=timeWithb3;
 	document.getElementById('extraTime').value=0;
 	document.getElementById('extraWork').value=0;
-    }
-    else{
+        }
+       else{
 	document.getElementById('break').value=0;
 	document.getElementById('total').value=normal_hour1;
 	document.getElementById('extraTime').value=0;
@@ -96,7 +96,7 @@ if(val==='平日'){
 	document.getElementById('extraWork').value=0;
     }		
 	
-  else{
+    else{
 	document.getElementById('break').value=break2_hour;
 	document.getElementById('total').value=normal_hour;
 	document.getElementById('extraTime').value=extra;
@@ -107,14 +107,14 @@ if(val==='平日'){
     else if(val==='休日'&& dayval==='日'){
 		
 		if(diff_hour <= 9.15){
-	    document.getElementById('break').value=break1_hour;
+	        document.getElementById('break').value=break1_hour;
 		document.getElementById('total').value=0;
 		document.getElementById('extraTime').value=0;
 		document.getElementById('extraWork').value=timeWithb1;
 		}
 	
 	   else{	
-       document.getElementById('break').value=break2_hour;
+           document.getElementById('break').value=break2_hour;
 	   document.getElementById('total').value=0;
 	   document.getElementById('extraTime').value=0;
 	   document.getElementById('extraWork').value=timeWithb2;
@@ -123,20 +123,20 @@ if(val==='平日'){
         }		
 	}
     
-    else if(val==='休日' && dayval==='土'){
+        else if(val==='休日' && dayval==='土'){
 		if(diff_hour <= 9.15){
-	    document.getElementById('break').value=break1_hour;
+	        document.getElementById('break').value=break1_hour;
 		document.getElementById('total').value=0;
 		document.getElementById('extraWork').value=0;
 		document.getElementById('extraTime').value=timeWithb1;
 		}
 	
-	   else{	
-       document.getElementById('break').value=break2_hour;
-	   document.getElementById('total').value=0;
-	   document.getElementById('extraTime').value=timeWithb2;
-	   document.getElementById('extraWork').value=0;
-        }		
+		   else{	
+		   document.getElementById('break').value=break2_hour;
+		   document.getElementById('total').value=0;
+		   document.getElementById('extraTime').value=timeWithb2;
+		   document.getElementById('extraWork').value=0;
+                   }		
 	}	
 }
 
@@ -147,16 +147,16 @@ function getDate(){
 	var m = n.getMonth() + 1;
 	var d = n.getDate();
 	var weekdays = new Array(7);
-        weekdays[0] = "日";
-        weekdays[1] = "月";
-        weekdays[2] = "火";
-        weekdays[3] = "水";
-        weekdays[4] = "木";
-        weekdays[5] = "金";
-        weekdays[6] = "土";
+	    weekdays[0] = "日";
+            weekdays[1] = "月";
+	    weekdays[2] = "火";
+	    weekdays[3] = "水";
+	    weekdays[4] = "木";
+	    weekdays[5] = "金";
+	    weekdays[6] = "土";
         var r = weekdays[n.getDay()];
         document.getElementById("day").value = r;
-	    document.getElementById('date').value = y + "/" + m + "/" + d;
+	document.getElementById('date').value = y + "/" + m + "/" + d;
 }
  
  
