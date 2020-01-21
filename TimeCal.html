@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href ="register.css">
+	
+  <script src="TimeCal.js"></script>
+
+<body onload="getDate();">
+	<form method="POST" action="TimeCal.php">
+	
+	    <div class="input-group">
+			<label> 日付 </label>
+			<input type="text" name="date" id="date"/>
+		</div>
+		
+		<div class="input-group">
+			<label> 曜日 </label>
+			<input type="text" name="dayName" id="day"/>
+		</div>	
+	
+		<div class="input-group">
+			<label> 区分 </label>
+			<select id="sel" name="division">
+					<option></option> 
+					<option value="平日">平日</option>
+					<option value="休日">休日</option>
+				    </select>
+		</div>	
+	    
+		
+		<div class="input-group">
+			<label> 始業時刻 </label>
+			<input type="text" name="startTime" id="startTime" onkeyup="getTime();" >
+		</div>
+		
+		<div class="input-group">
+			<label> 終業時刻 </label>
+			<input type="text" name="endTime" id="endTime" onkeyup="getTime();" >
+		</div>
+			
+		<div class="input-group">
+			<label> 休憩時間 </label>
+			<input type="text" name="breakTime" id="break" />
+		</div>	
+			
+		<div class="input-group">
+			<label> 時間内時間 </label>
+			<input type="text" name="totalTime" id="total"  />
+		</div>	
+		 
+		<div class="input-group">
+			<label> 時間外時間 </label>
+			<input type="text" name="extraTime" id="extraTime"  />
+		</div>
+		
+		<div class="input-group">
+			<label> 休日時間 </label>
+			<input type="text" name="extraWork" id="extraWork" />
+		</div>
+		
+		<div class="input-group">
+			<label> 業務内容 </label>
+			<textarea name="content" id="content" ></textarea>
+		</div>
+		
+		<div class="input-group">
+			<label> 勤怠 </label>
+			<select id="Wrecord" name="Wrecord">
+			<option></option> 
+			<option value="欠勤">欠勤</option>
+			<option value="振替休日">振替休日</option>
+			<option value="休日出勤">休日出勤</option>
+			<option value="遅刻">遅刻</option>
+			<option value="早退">早退</option>
+			<option value="有総休暇">有総休暇</option>
+			<option value="特別休暇">特別休暇</option>
+			<option value="その他">その他</option>
+			</select>
+		</div>
+		
+		<div class="input-group">
+			<br><button type="submit" class="btn" name="submit" value="submit"> OK </button>
+		</div>
+	</form>
+		
+</body>
+</html>

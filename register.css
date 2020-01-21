@@ -1,0 +1,107 @@
+* { 
+    margin: 0px; 
+    padding: 0px; 
+	}
+
+body {
+	font-size: 120%;
+	background: #e6ecff;
+}
+
+form {
+	width: 40%;
+	margin: 10px auto;
+	padding: 30px;
+	border: 1px solid #4d79ff;
+	background: white;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.input-group {
+	margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+	display: block;
+	text-align: left;
+	
+}
+
+.input-group input {
+	height: 30px;
+	width: 85%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.input-group select{
+	padding:6px;
+	font-size:16px;
+	width:85%;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	 
+}
+textarea{
+	height:30px;
+	width: 85%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	
+}
+
+.btn {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #4d79ff;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.bg-img {
+  background-image: url("mlogo.jpg");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 40px;
+  padding: 40px;
+  border: 1px solid #4d79ff;
+}
+
+
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+
+.topnav a {
+  float: left;
+  color: #4d79ff;
+  text-align: center;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #4d79ff;
+  color: black;
+}
